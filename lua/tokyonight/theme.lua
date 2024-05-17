@@ -212,6 +212,7 @@ function M.setup()
     -- These groups are for the Neovim tree-sitter highlights.
     ["@annotation"] = { link = "PreProc" },
     ["@attribute"] = { link = "PreProc" },
+    ["@attribute.builtin"] = { link = "PreProc" }, -- builtin annotations (e.g. `@property` in Python)
     ["@boolean"] = { link = "Boolean" },
     ["@character"] = { link = "Character" },
     ["@character.special"] = { link = "SpecialChar" },
@@ -244,6 +245,7 @@ function M.setup()
     ["@markup.link.label"] = { link = "SpecialChar" },
     ["@markup.link.label.symbol"] = { link = "Identifier" },
     ["@tag"] = { link = "Label" },
+    ["@tag.builtin"] = { link = "Label" }, -- XML-style tag names (e.g. HTML5 tags)
     ["@tag.attribute"] = { link = "@property" },
     ["@tag.delimiter"] = { link = "Delimiter" },
     ["@markup"] = { link = "@none" },
