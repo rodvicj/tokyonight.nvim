@@ -82,6 +82,9 @@ local highlights = {
   ["@character"] = {
     link = "Character"
   },
+  ["@character.printf"] = {
+    link = "SpecialChar"
+  },
   ["@character.special"] = {
     link = "SpecialChar"
   },
@@ -357,6 +360,9 @@ local highlights = {
   ["@markup.heading.6.markdown"] = {
     bold = true,
     fg = "#9d7cd8"
+  },
+  ["@markup.italic"] = {
+    italic = true
   },
   ["@markup.link"] = {
     fg = "#1abc9c"
@@ -1125,6 +1131,47 @@ local highlights = {
     fg = "#7aa2f7",
     style = {}
   },
+  FzfLuaBorder = {
+    bg = "#1f2335",
+    fg = "#29a4bd"
+  },
+  FzfLuaCursor = {
+    link = "IncSearch"
+  },
+  FzfLuaDirPart = {
+    link = "Directory"
+  },
+  FzfLuaFzfCursorLine = {
+    link = "Visual"
+  },
+  FzfLuaFzfPointer = {
+    fg = "#ff007c"
+  },
+  FzfLuaFzfSeparator = {
+    bg = "#1f2335",
+    fg = "#ff9e64"
+  },
+  FzfLuaHeaderBind = {
+    link = "@punctuation.special"
+  },
+  FzfLuaHeaderText = {
+    link = "Title"
+  },
+  FzfLuaNormal = {
+    bg = "#1f2335",
+    fg = "#c0caf5"
+  },
+  FzfLuaPath = {
+    link = "Directory"
+  },
+  FzfLuaPreviewTitle = {
+    bg = "#1f2335",
+    fg = "#29a4bd"
+  },
+  FzfLuaTitle = {
+    bg = "#1f2335",
+    fg = "#ff9e64"
+  },
   GitGutterAdd = {
     fg = "#266d6a"
   },
@@ -1241,6 +1288,14 @@ local highlights = {
     nocombine = true
   },
   IndentBlanklineContextChar = {
+    fg = "#2ac3de",
+    nocombine = true
+  },
+  IndentLine = {
+    fg = "#3b4261",
+    nocombine = true
+  },
+  IndentLineCurrent = {
     fg = "#2ac3de",
     nocombine = true
   },
@@ -1777,6 +1832,18 @@ local highlights = {
   NeoTreeDimText = {
     fg = "#3b4261"
   },
+  NeoTreeFileName = {
+    fg = "#a9b1d6"
+  },
+  NeoTreeGitModified = {
+    fg = "#ff9e64"
+  },
+  NeoTreeGitStaged = {
+    fg = "#73daca"
+  },
+  NeoTreeGitUntracked = {
+    fg = "#bb9af7"
+  },
   NeoTreeNormal = {
     bg = "#1f2335",
     fg = "#a9b1d6"
@@ -2103,6 +2170,40 @@ local highlights = {
   NvimTreeWinSeparator = {
     bg = "#1f2335",
     fg = "#1f2335"
+  },
+  OctoDetailsLabel = {
+    bold = true,
+    fg = "#2ac3de"
+  },
+  OctoDetailsValue = {
+    link = "@variable.member"
+  },
+  OctoDirty = {
+    bold = true,
+    fg = "#ff9e64"
+  },
+  OctoIssueTitle = {
+    bold = true,
+    fg = "#9d7cd8"
+  },
+  OctoStateChangesRequested = {
+    link = "DiagnosticVirtualTextWarn"
+  },
+  OctoStateClosed = {
+    link = "DiagnosticVirtualTextError"
+  },
+  OctoStateMerged = {
+    bg = "#33334e",
+    fg = "#bb9af7"
+  },
+  OctoStateOpen = {
+    link = "DiagnosticVirtualTextHint"
+  },
+  OctoStatePending = {
+    link = "DiagnosticVirtualTextWarn"
+  },
+  OctoStatusColumn = {
+    fg = "#2ac3de"
   },
   Operator = {
     fg = "#89ddff"

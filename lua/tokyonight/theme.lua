@@ -216,6 +216,7 @@ function M.setup()
     ["@boolean"] = { link = "Boolean" },
     ["@character"] = { link = "Character" },
     ["@character.special"] = { link = "SpecialChar" },
+    ["@character.printf"] = { link = "SpecialChar" },
     ["@comment"] = { link = "Comment" },
     ["@keyword.conditional"] = { link = "Conditional" },
     ["@constant"] = { link = "Constant" },
@@ -255,6 +256,7 @@ function M.setup()
     ["@markup.math"] = { link = "Special" },
     ["@markup.strong"] = { bold = true },
     ["@markup.emphasis"] = { italic = true },
+    ["@markup.italic"] = { italic = true },
     ["@markup.strikethrough"] = { strikethrough = true },
     ["@markup.underline"] = { underline = true },
     ["@markup.heading"] = { link = "Title" },
@@ -278,7 +280,7 @@ function M.setup()
     ["@punctuation.delimiter"] = { fg = c.blue5 }, -- For delimiters ie: `.`
     ["@punctuation.bracket"] = { fg = c.fg_dark }, -- For brackets and parens.
     ["@punctuation.special"] = { fg = c.blue5 }, -- For special symbols (e.g. `{}` in string interpolation)
-    ["@markup.list"] = { fg = c.blue5 }, -- For special punctutation that does not fall in the catagories before.
+    ["@markup.list"] = { fg = c.blue5 }, -- For special punctutation that does not fall in the categories before.
     ["@markup.list.markdown"] = { fg = c.orange, bold = true },
 
     --- Literals
@@ -293,7 +295,7 @@ function M.setup()
 
     --- Keywords
     ["@keyword"] = { fg = c.purple, style = options.styles.keywords }, -- For keywords that don't fall in previous categories.
-    ["@keyword.function"] = { fg = c.magenta, style = options.styles.functions }, -- For keywords used to define a fuction.
+    ["@keyword.function"] = { fg = c.magenta, style = options.styles.functions }, -- For keywords used to define a function.
 
     ["@label"] = { fg = c.blue }, -- For labels: `label:` in C and `:label:` in Lua.
 
@@ -476,6 +478,22 @@ function M.setup()
     TelescopePromptTitle = { fg = c.orange, bg = c.bg_float },
     TelescopeResultsComment = { fg = c.dark3 },
 
+    -- FzfLua
+    FzfLuaBorder = { fg = c.border_highlight, bg = c.bg_float },
+    FzfLuaNormal = { fg = c.fg, bg = c.bg_float },
+    FzfLuaTitle = { fg = c.orange, bg = c.bg_float },
+    FzfLuaPreviewTitle = { fg = c.border_highlight, bg = c.bg_float },
+    FzfLuaDirPart = { link = "Directory" },
+    -- FzfLuaTitle = { bg = c.bg_highlight, fg = c.orange },
+    -- FzfLuaPreviewTitle = { bg = c.bg_dark, fg = c.bg_dark },
+    FzfLuaCursor = { link = "IncSearch" },
+    FzfLuaHeaderBind = { link = "@punctuation.special" },
+    FzfLuaHeaderText = { link = "Title" },
+    FzfLuaPath = { link = "Directory" },
+    FzfLuaFzfPointer = { fg = c.magenta2 },
+    FzfLuaFzfCursorLine = { link = "Visual" },
+    FzfLuaFzfSeparator = { fg = c.orange, bg = c.bg_float },
+
     -- NvimTree
     NvimTreeNormal = { fg = c.fg_sidebar, bg = c.bg_sidebar },
     NvimTreeWinSeparator = {
@@ -498,6 +516,10 @@ function M.setup()
     NeoTreeNormal = { fg = c.fg_sidebar, bg = c.bg_sidebar },
     NeoTreeNormalNC = { fg = c.fg_sidebar, bg = c.bg_sidebar },
     NeoTreeDimText = { fg = c.fg_gutter },
+    NeoTreeGitModified = { fg = c.orange },
+    NeoTreeGitUntracked = { fg = c.magenta },
+    NeoTreeGitStaged = { fg = c.green1 },
+    NeoTreeFileName = { fg = c.fg_sidebar },
 
     -- Fern
     FernBranchText = { fg = c.blue },
@@ -678,6 +700,19 @@ function M.setup()
     IndentBlanklineContextChar = { fg = c.blue1, nocombine = true },
     IblIndent = { fg = c.fg_gutter, nocombine = true },
     IblScope = { fg = c.blue1, nocombine = true },
+    IndentLine = { fg = c.fg_gutter, nocombine = true },
+    IndentLineCurrent = { fg = c.blue1, nocombine = true },
+
+    OctoDirty = { fg = c.orange, bold = true },
+    OctoStatusColumn = { fg = c.blue1 },
+    OctoDetailsLabel = { fg = c.blue1, bold = true },
+    OctoDetailsValue = { link = "@variable.member" },
+    OctoIssueTitle = { fg = c.purple, bold = true },
+    OctoStateOpen = { link = "DiagnosticVirtualTextHint" },
+    OctoStateClosed = { link = "DiagnosticVirtualTextError" },
+    OctoStatePending = { link = "DiagnosticVirtualTextWarn" },
+    OctoStateChangesRequested = { link = "DiagnosticVirtualTextWarn" },
+    OctoStateMerged = { bg = util.darken(c.magenta, 0.1), fg = c.magenta },
 
     -- Scrollbar
     ScrollbarHandle = { fg = c.none, bg = c.bg_highlight },
