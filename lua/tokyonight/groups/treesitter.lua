@@ -8,6 +8,7 @@ function M.get(c, opts)
   local ret = {
     ["@annotation"]                 = "PreProc",
     ["@attribute"]                  = "PreProc",
+    ["@attribute.builtin"]          = "PreProc", -- builtin annotations (e.g. `@property` in Python)
     ["@boolean"]                    = "Boolean",
     ["@character"]                  = "Character",
     ["@character.printf"]           = "SpecialChar",
